@@ -1,0 +1,45 @@
+{
+  "/api": {
+    "target": "https://push2.eastmoney.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": "/api"
+    },
+    "headers": {
+      "Referer": "https://eastmoney.com",
+      "Host": "push2.eastmoney.com"
+    }
+  },
+  "/his_api": {
+    "target": "https://push2his.eastmoney.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/his_api": "/api"
+    },
+    "headers": {
+      "Referer": "https://eastmoney.com",
+      "Host": "push2his.eastmoney.com"
+    }
+  },
+  "/alpha_api": {
+    "target": "https://www.alphavantage.co",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/alpha_api": "/"
+    }
+  },
+  "/finnhub_api": {
+    "target": "https://finnhub.io",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/finnhub_api": "/api/v1"
+    },
+    "headers": {
+      "X-Finnhub-Token": "d6g0kfpr01qqnmbqalf0d6g0kfpr01qqnmbqalfg"
+    }
+  }
+}
