@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "ng serve --no-analytics",
+    "dev": "concurrently \"tsx server.ts\" \"ng serve --port 4200\"",
     "build": "ng build",
-    "start": "node server.ts",
+    "start": "tsx server.ts",
     "preview": "ng serve --configuration=production"
   },
   "dependencies": {
@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
